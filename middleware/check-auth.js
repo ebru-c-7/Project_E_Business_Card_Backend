@@ -13,7 +13,7 @@ const checkAuth = (req, res, next) => {
     if (!token) {
       throw new Error("Authentication failed!");
     }
-    const decodedToken = jwt.verify(token, "project-e-business-cards");
+    const decodedToken = jwt.verify(token, process.env.KEY);
     req.personData = { pId: decodedToken.pId };
     next();
   } catch (err) {

@@ -51,7 +51,7 @@ const signup = async (req, res, next) => {
   try {
     token = jwt.sign(
       { pId: newPerson.id, email: newPerson.email },
-      "project-e-business-cards",
+      process.env.KEY,
       { expiresIn: "3h" }
     );
   } catch (err) {
@@ -101,7 +101,7 @@ const login = async (req, res, next) => {
   try {
     token = jwt.sign(
       { pId: findPerson.id, email: findPerson.email },
-      "project-e-business-cards",
+      process.env.KEY,
       { expiresIn: "3h" }
     );
   } catch (err) {
