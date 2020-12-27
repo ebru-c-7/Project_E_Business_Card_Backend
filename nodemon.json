@@ -1,8 +1,0 @@
-{
-    "env": {
-        "DB_USER" : "ebru-c-7",
-        "DB_PASSWORD": "301699",
-        "DB_NAME": "test",
-        "KEY": "project-e-business-cards"
-    }
-}
